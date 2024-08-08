@@ -1,5 +1,86 @@
+// $background-color: #f0f0f0;
+// $text-color: #000000;
+// $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+// $card-background: white;
+// $card-padding: 20px;
+// $card-border-radius: 10px;
+// $card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+// $button-background: #3880ff;
+// $button-hover-background: #3171e0;
+// $input-border-color: #ccc;
+
+// body {
+//   background-color: $background-color;
+//   color: $text-color;
+//   font-family: $font-family;
+// }
+
+// .ion-page {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+// }
+
+// .ion-content {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+// }
+
+// .login-container {
+//   width: 90%;
+//   max-width: 400px;
+//   padding: $card-padding;
+// }
+
+// .login-card {
+//   background: $card-background;
+//   padding: $card-padding;
+//   border-radius: $card-border-radius;
+//   box-shadow: $card-box-shadow;
+//   text-align: center;
+
+//   h2 {
+//     margin-bottom: 20px;
+//     font-size: 1.5rem;
+//   }
+
+//   .form-group {
+//     margin-bottom: 15px;
+//     text-align: left;
+
+//     label {
+//       display: block;
+//       margin-bottom: 5px;
+//     }
+
+//     input {
+//       width: 100%;
+//       padding: 10px;
+//       border: 1px solid $input-border-color;
+//       border-radius: 5px;
+//     }
+//   }
+
+//   .login-button {
+//     width: 100%;
+//     padding: 10px;
+//     background-color: $button-background;
+//     color: white;
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+
+//     &:hover {
+//       background-color: $button-hover-background;
+//     }
+//   }
+// }
+// login.page.scss
 $background-color: #f0f0f0;
-$text-color: #333;
+$text-color: #000000;
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $card-background: white;
 $card-padding: 20px;
@@ -45,6 +126,7 @@ body {
   h2 {
     margin-bottom: 20px;
     font-size: 1.5rem;
+    color: $text-color;
   }
 
   .form-group {
@@ -54,6 +136,7 @@ body {
     label {
       display: block;
       margin-bottom: 5px;
+      color: $text-color;
     }
 
     input {
@@ -61,6 +144,7 @@ body {
       padding: 10px;
       border: 1px solid $input-border-color;
       border-radius: 5px;
+      color: $text-color;
     }
   }
 
@@ -76,5 +160,9 @@ body {
     &:hover {
       background-color: $button-hover-background;
     }
+  }
+
+  p {
+    color: red;
   }
 }

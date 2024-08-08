@@ -1,3 +1,9 @@
 <ion-header>
-  <h1>header</h1>
+  <div class="header-container">
+    <img src="../../../../../assets/Logo_Ferre-removebg-preview.png" alt="Logo" class="header-logo">
+    <ion-button class="button-logout" *ngIf="authService.isLoggedIn()" (click)="logout()">
+      SALIR 
+      <ion-icon name="exit-outline"></ion-icon>
+    </ion-button>
+  </div>
 </ion-header>

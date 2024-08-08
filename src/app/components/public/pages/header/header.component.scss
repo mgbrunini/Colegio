@@ -1,0 +1,17 @@
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8f6; /* Cambia el color de fondo si es necesario */
+    height: 100px; /* Ajusta la altura según sea necesario */
+  
+    .header-logo {
+        width: 100px;
+        margin-right: auto;
+    }
+
+    .button-logout{
+        
+    }
+  }
+  
