@@ -1,7 +1,7 @@
 <ion-header>
   <div class="header-container">
-    <img src="../../../../../assets/Logo_Ferre-removebg-preview.png" alt="Logo" class="header-logo">
-    <ion-button class="button-logout" *ngIf="authService.isLoggedIn()" (click)="logout()">
+    <img src="../../../../../assets/Logo_Ferre-removebg-preview.png" alt="Logo" class="header-logo" (click)="goHome()">
+    <ion-button class="button-logout" *ngIf="authService.isAuthenticated()" (click)="logout()">
       SALIR 
       <ion-icon name="exit-outline"></ion-icon>
     </ion-button>

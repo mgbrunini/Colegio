@@ -5,29 +5,33 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private isAuthenticated = false;
-  private readonly username = 'escuela';
-  private readonly password = 'Ferre2024*';
+  private readonly validUsername = 'escuela';
+  private readonly validPassword = 'Ferre2024*';
 
-  constructor(private router: Router) {}
+  constructor() {}
 
-  login(user: string, pass: string): boolean {
-    if (user === this.username && pass === this.password) {
-      this.isAuthenticated = true;
-      this.router.navigate(['/home']);
+  login(username: string, password: string): boolean {
+    console.log("El username es: ", username ,"y la clave es ", password);
+    
+    if (username === this.validUsername && password === this.validPassword) {
+      // Guarda el estado de autenticación
+      localStorage.setItem('isAuthenticated', 'true');
+      console.log("Esta logeado")
       return true;
     }
-    this.isAuthenticated = false;
+    // Si la autenticación falla, asegúrate de no guardar el estado
+    localStorage.removeItem('isAuthenticated');
+    console.log("Falló el logeo")
     return false;
   }
 
-  logout(): void {
-    this.isAuthenticated = false;
-    this.router.navigate(['/login']);
+  isAuthenticated(): boolean {
+    return localStorage.getItem('isAuthenticated') === 'true';
   }
 
-  isLoggedIn(): boolean {
-    return this.isAuthenticated;
+  logout(): void {
+    localStorage.removeItem('isAuthenticated');
+    
   }
 }
 
