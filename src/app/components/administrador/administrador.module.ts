@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ImprimiblesRoutingModule } from './imprimibles-routing.module';
+import { AdministradorRoutingModule } from './administrador-routing.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    ImprimiblesRoutingModule
+    AdministradorRoutingModule
   ]
 })
-export class ImprimiblesModule { }
+export class AdministradorModule { }

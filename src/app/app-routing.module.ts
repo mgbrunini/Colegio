@@ -4,7 +4,7 @@ import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {path: '', loadChildren: () => import('./components/public/public.module').then(m => m.PublicModule)},
-  {path: 'administrador', loadChildren: () => import('./components/Administrador/pages/imprimibles/imprimibles/imprimibles.module').then(m => m.ImprimiblesModule), canActivate: [AuthGuard] },
+  {path: 'administrador', loadChildren: () => import('./components/administrador/administrador.module').then(m => m.AdministradorModule), canActivate: [AuthGuard] },
   
 ];
 
