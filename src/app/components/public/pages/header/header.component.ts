@@ -17,6 +17,10 @@ export class HeaderComponent {
   }
 
   goHome(){
-    this.route.navigate([''])
+    if (this.authService.isAuthenticated()) {
+      this.route.navigate(['/administrador'])
+    } else {
+      this.route.navigate([''])
+    }
   }
 }

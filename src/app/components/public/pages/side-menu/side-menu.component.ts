@@ -5,10 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './side-menu.component.html',
   styleUrls: ['./side-menu.component.scss'],
 })
-export class SideMenuComponent  implements OnInit {
+export class SideMenuComponent  {
   public appPages = [
     { title: 'Login', url: '/login', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
+    { title: 'Dasboard', url: '/administrador', icon: 'desktop-outline' },
     { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
     { title: 'Archived', url: '/folder/archived', icon: 'archive' },
     // { title: 'Trash', url: '/folder/trash', icon: 'trash' },
@@ -17,6 +17,5 @@ export class SideMenuComponent  implements OnInit {
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() { }
 
-  ngOnInit() {}
 
 }
